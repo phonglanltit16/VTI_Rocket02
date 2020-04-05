@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Collections;
 
 public class Main {
-	ArrayList<Object> Bees = new ArrayList<>();
+	ArrayList<Bee> Bees = new ArrayList<>();
 	private static Scanner sc;
 
 	public static void main(String[] args) {
@@ -69,8 +69,28 @@ public class Main {
 		
 		private void attackBee() {
 			
-			
-			
+			for (Bee bee1: Bees ){
+				if( bee1 instanceof Drone){
+					Drone dr = (Drone) bee1;
+					if(dr.CheckHealthStatus()==true)
+						bee1.Damage(new Random().nextInt(81));		
+				}
+				
+				else if( bee1 instanceof Queen){
+					Queen q = (Queen) bee1;
+					if(q.CheckHealthStatus()==true)
+						bee1.Damage(new Random().nextInt(81));		
+				}
+				
+				else{
+					Worker w = (Worker) bee1;
+					if(w.CheckHealthStatus()==true)
+						bee1.Damage(new Random().nextInt(81));		
+				}
+			}
+			System.out.println("ATTACK SUCCESSFULLY!");
+
+				
 		
 		}
 		private void showStatus() {

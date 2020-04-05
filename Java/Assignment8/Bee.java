@@ -22,8 +22,8 @@ public class Bee {
 		 }
 	 }
 
-public void CheckHealthStatus(){
-	System.out.println("Health status = " + floatingPointHealth);
+public  boolean CheckHealthStatus(){
+		return false;
 }
 
 

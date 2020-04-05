@@ -9,7 +9,7 @@ public class Drone extends Bee{
 	
 
 @Override
-	public void CheckHeadthStatus(){
+	public boolean CheckHeadthStatus(){
 		super.CheckHealthStatus();
 		if(floatingPointHealth < 50){
 			System.out.println("Die");

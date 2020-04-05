@@ -6,7 +6,7 @@ public class Worker extends Bee {
 		super();
 	}
 	@Override
-	public void CheckHeadthStatus(){
+	public boolean CheckHeadthStatus(){
 		super.CheckHealthStatus();
 		if(floatingPointHealth < 70){
 			System.out.println("No fly and die");

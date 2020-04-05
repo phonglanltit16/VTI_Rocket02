@@ -7,7 +7,7 @@ public class Queen extends Bee{
 
 	}
 @Override
-	public void CheckHeadthStatus(){
+	public boolean CheckHeadthStatus(){
 		super.CheckHealthStatus();
 		if(floatingPointHealth < 20){
 			System.out.println("Die");
