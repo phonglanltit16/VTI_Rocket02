@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables with Bootstrap3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .example{
+            margin: 20px;
+        }
+        .thread{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+     <h1>Quản lý nhân viên</h1>
+        <table class="table table-hover">
+            <thead> 
+                <tr>
+                    <th>ID</th>
+                    <th>Họ tên</th>
+                    <th>Khoa/Phòng ban</th>
+                    <th>Trình độ chức vụ</th>
+                    <th>Phụ cấp</th>
+                    <th>Số tiết dạy/Ngày công</th>
+                    <th>Tổng lương</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>Phạm Hải</td>
+                    <td>Toán</td>
+                    <td>Cử nhân</td>
+                    <td>2000</td>
+                    <td>2</td>
+                    <th>7000000</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Dang Huong</td>
+                    <td>Đào tạo</td>
+                    <td>Nhân Viên</td>
+                    <td>2000</td>
+                    <td>3</td>
+                    <th>6000000</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Hoàng Việt Thắng</td>
+                    <td>Lý</td>
+                    <td>Cử nhân</td>
+                    <td>2000</td>
+                    <td>3</td>
+                    <th>5000000</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Nguyễn Trung Kiên</td>
+                    <td>Đào tạo </td>
+                    <td>Phó phòng</td>
+                    <td>2000</td>
+                    <td>4</td>
+                    <th>9000000</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Trần Thục Quyên</td>
+                    <td>Đào tạo</td>
+                    <td>Trưởng phòng</td>
+                    <td>2000</td>
+                    <td>4</td>
+                    <th>10000000</th>
+                </tr>
+            </tbody>
+        </table>
+        <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+        </ul>
+        <br><br><br>
+
+    <form class="form-inline" action="/action_page.php">
+        <div class="input-group">
+            <span class="input-group-addon">Tên nhân viên</span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Nhập tên nhân viên">
+        </div></br>
+        <button type="button" class="btn-success">Load Data</button>
+        <button type="button" class="btn-warning">Thêm nhân viên</button>
+        <button type="button" class="btn-primary">Sắp xếp</button>
+        
+    </form>
+
+</body>
+</html>
