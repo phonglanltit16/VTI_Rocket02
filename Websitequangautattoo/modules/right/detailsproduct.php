@@ -27,4 +27,4 @@
   </tr>
   
 </table>
-<a href="index.php?xem=cart&add1=<?php echo $row_detailsproduct['id_product'] ?>"><img src="img/botton/buy1.jpg" height="150" width="150" >
+<a href="index.php?xem=cart&add1=<?php echo $row_detailsproduct['id_product'] ?>"><img src="img/botton/buy1.jpg" height="80" width="120" >

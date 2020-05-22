@@ -6,21 +6,18 @@
 	$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
 ?>
 <?php
-if(isset($_POST['search'])){
-	$search=$_POST['searchtext'];
+if(isset($_POST['ok'])){
+	$search=$_POST['search'];
 	$sql_search="select *from detailsproduct where description LIKE '%$search%'";
 	$query_search=mysqli_query($conn,$sql_search);
-}
-?>
-<div><p class="titleproduct"><strong>SẢN PHẨM TÌM THẤY</strong></p></div>
-<div class="allproduct">
-<?php 
-if($nums=mysqli_num_rows($query_search)==0){
-?>
-<p>Không tìm thấy sản phẩm nào</p>
-<?php
+	$nums=mysqli_num_rows($query_search);
+}if($nums==0){
+	echo 'Không tìm thấy sản phẩm nào';
+
 }else{
+	echo $nums.' kết quả với từ khóa '.'" '.$search.'"' ;
 ?>
+
 	<ul>
 	<?php
     while($row_search=mysqli_fetch_array($query_search)){
@@ -35,4 +32,6 @@ if($nums=mysqli_num_rows($query_search)==0){
 }
     ?>
     </ul>
-    </div>
+    			
+		
+			

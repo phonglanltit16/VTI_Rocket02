@@ -21,9 +21,15 @@
 				}elseif($tam=='cart'){
 					include('modules/right/cart.php');
 				}elseif($tam=='login'){
-					include('modules/right/login.php');
+					include('modules/right/payment.php');
 				}elseif($tam=='signup'){
 					include('modules/right/signup.php');
+				}elseif(isset($_POST['search'])){
+					include('modules/right/search.php');
+				}elseif($tam=='payment'){
+					include('modules/right/payment.php');
+				}elseif($tam=='notification'){
+					include('modules/right/notification.php');
 				}else{
 					include('modules/right/allproduct.php');			
 				}

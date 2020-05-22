@@ -1,14 +1,13 @@
 <?php
 	include('../config.php');
 	
-	$id = $_GET['id'];
 	$articlename = $_POST['articlename'];
 	$img=$_FILES['img']['name'];
 	$img_tmp=$_FILES['img']['tmp_name'];
 	move_uploaded_file($img_tmp,'uploads/'.$img);
 	$summary = $_POST['summary'];
 	$content=$_POST['content'];
-	
+	$id = $_GET['id'];
 
 	if(isset($_POST['add'])){
 		//add 
@@ -33,8 +32,12 @@
 		$sql="update managementnews set 	articlename='$articlename',summary='$summary',content='$content'
 		where id_news='$id'";
 		}
-		//print($sql);
-		mysqli_query($sql);
+		if(mysqli_query($conn,$sql)){
+			echo "okie";
+			echo $sql;
+		}else{
+			echo 'Không thành công, lỗi'. $conn->error;
+		}
 		header('location:../../index.php?management=managementnews');
 		
 	}else{

@@ -24,7 +24,7 @@
   <tr>
     <td><?php echo $i; ?></td>
     <td><?php echo $row['articlename'] ?></td>
-    <td><img src="modules/managementnews/uploads/<?php echo $row['img'] ?>" width="60" height="60" ></td>
+    <td><img src="modules/managementnews/img/<?php echo $row['img'] ?>" width="60" height="60" ></td>
     <td><?php echo $row['summary'] ?></td>
     <td><?php echo $row['content']; ?></td>
     <td><a href="modules/managementnews/modify.php?id=<?php echo $row['id_news'] ?>">Modify</a></td>

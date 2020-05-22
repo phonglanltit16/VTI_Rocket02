@@ -1,0 +1,31 @@
+package TS_buoi3;
+
+
+
+public class DatatypeCasting {
+	public static void main(String[] args) {
+		/*float salaryOfAccount1= 5240.5f;
+		float salaryOfAccount2= 10970.055f; 
+		
+		int salaryCasting = (int) salaryOfAccount1;
+		System.out.println(salaryCasting);
+		int a =1 ;
+		 int b=2;
+		 float c= (float) (a/ b) ;
+		 System.out.println(c);*/
+		Account [] accounts = new Account [5];
+		for (int i = 0; i<5; i++){
+			accounts[i]= new Account();
+			accounts[i].email= "abc"+i;
+			accounts[i].fullName= "xyz" + i;
+			accounts[i].userName= accounts[i].fullName+ "508";
+			java.util.Date date= new java.util.Date();
+			accounts[i].createAccoutDate= date;
+		}
+		for (int i = 0; i<5; i++){
+			System.out.println("Email" +accounts[i].email + "Fullname"+accounts[i].fullName );
+		}
+		  
+		 
+	}
+}

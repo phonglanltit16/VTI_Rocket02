@@ -5,19 +5,20 @@
             <li><a href="index.php">Homepage</a></li>
             <li><a href="?xem=allproduct">Product</a></li>
             <li><a href="#">News</a></li>
-            <li><a href="#">Video</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="?xem=login">Login</a></li>
-            <li><a href="?xem=signup">Sign up</a></li>
-        
-      
-     
-        <form action="index.php" method="post" enctype="multipart/form-data">
+            <li><a href="?xem=dathang">Shopping Cart</a></li>
+            <li><a href="?xem=payment">Login</a></li>
+            <li><a href="?xem=thank">Logout</a></li>  
+            
+            
+                   
         <div class="searchform" >
-            <input type="text" id="searchf" name"searchtext" size="25">
-            <input type="submit" id="searchbtn" name="search" value="Search" placeholder="Search....." >
+            <form action="index.php" method="post" enctype="multipart/form-data">
+               <input type="text" name="search" />
+                <input type="submit" name="ok" value="search" />
+            </form>
         </div>
-        </form>
+        
    
      </ul>
 </div>

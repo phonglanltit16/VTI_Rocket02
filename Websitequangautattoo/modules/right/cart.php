@@ -5,21 +5,26 @@
 	$database='webquangautattoo';
 	$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
 ?>
+<?php
+	session_start();
+?>
 <h1><strong>SHOPPING CART</strong></h1>
-
+<?php
+if(isset($_SESSION['login'])){ 
+			echo 'Hello '.$_SESSION['login'];
+	}
+?>
 <table width="100%" border="1">
   <tr>
     <td >STT</td>
 	<td >Img</td>
 	<td >Description</td>
-	
     <td >Price</td>
     <td >Num</td>
 	<td >Total</td>
 	<td colspan="3">Edit</td>
   </tr>
   <?php
-	session_start();
 	//session_destroy();
 	if(isset($_GET['add1'])&&!empty($_GET['add1'])){
 		$id=$_GET['add1'];
@@ -41,32 +46,31 @@
 
 
 	//hiển thị sản phẩm đã chọn
+	$i=0;
 	foreach($_SESSION as $name1 => $value1){
+	$i++;	
 		if($value1>0){
 			if(substr($name1,0,5)=='cart_'){
 				$id=substr($name1,5,strlen($name1)-5);
 				$sql="SELECT * FROM detailsproduct WHERE id_product='".$id."'";
 				$run=mysqli_query($conn, $sql);
 ?>		
-  <?php
-  $i=1;
+  <?php 
   while($row=mysqli_fetch_array($run)){
-	 
   ?>
   <tr>
-    <td ><?php echo $i;?></td>
+    <td ><?php echo $i; ?></td>
 	<td ><img src="admincp/modules/managementofdetailsproduct/uploads/<?php echo $row['img'] ?>" width="200" height="200" /></td>
-	<td ><?php echo $row['description'];?></td>
-	
-    <td ><?php echo $row['price'] ;?></td>
-    <td ><?php echo $value1 ;?></td>
-	<td ><?php echo $total=$row['price']*$value1;?>VND</td>
-	<td ><a href="index.php?xem=cart&cong=<?php '.$id.' ?>">[+]</a></td>
-	<td ><a href="index.php?xem=cart&bot=<?php '.$id.' ?>">[-]</a></td>
-	<td ><a href="index.php?xem=cart&bo=<?php '.$id.' ?>">delete</a></td>
+	<td><?php echo $row['description'];?></td>
+    <td><?php echo $row['price'] ;?></td>
+    <td><?php echo $value1 ;?></td>
+	<td><?php echo $total=$row['price']*$value1;?>VND</td>
+    <td><a href="index.php?xem=cart&cong='.$id.'">[+]</a></td>	
+    <td><a href="index.php?xem=cart&bot='.$id.'">[-]</a></td>
+	<td><a href="index.php?xem=cart&bo='.$id.'">delete</a></td>
   </tr>
   <?php 
-   $i++;
+  
   }}
   $valueall+=$value1;
   $totalall+=$total;
@@ -81,5 +85,11 @@
   </tr>
 
   </table>
-				
-					
+<a href="index.php?xem=payment"><img src="img/botton/pay1.jpg" height="80" width="120" style="float:right">
+<?php
+	
+		if(isset($_GET['xem'])&&$_GET['xem']=='logout'){
+		unset($SESSION['login']);
+		header('location:index.php?xem=cart');
+	}
+?>

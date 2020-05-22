@@ -1,4 +1,3 @@
-
 <?php
 	$localhostname='localhost';
 	$accoutname='root';
@@ -13,7 +12,7 @@
 	$row=mysqli_fetch_array($run);
 ?>
 
-<form action="handle.php?id=<?php echo $row['id_producttype']?>" method="post" enctype="multipart/form-data">
+<form action="handle.php?id=<?php echo $row['id_product']?>" method="post" enctype="multipart/form-data">
 <table width="200" border="1">
   <tr>
     <td colspan="2"><div align="center">Modify details of product</div></td>

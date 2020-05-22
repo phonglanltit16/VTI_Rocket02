@@ -15,8 +15,8 @@
 <body>
 	<?php
 		session_start();
-		if(!isset($_SESSION['login'])){
-			header('location:login.php');
+		if(!isset($_SESSION['loginadmin'])){
+			header('location:loginadmin.php');
 		}
     ?>
 	<div class="wrapper">

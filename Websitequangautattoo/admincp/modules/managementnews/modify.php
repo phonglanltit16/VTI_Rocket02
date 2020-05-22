@@ -7,11 +7,12 @@
 	
 ?>
 <?php
-	$sql="select * from managementnews where id_news=$_GET[id]";
+	
+	$sql="select * from managementnews where id_news='$_GET[id]'";
 	$run=mysqli_query($conn,$sql);
 	$row=mysqli_fetch_array($run);
 ?>
-<form action="handle.php" method="post" enctype="multipart/form-data">
+<form action="handle.php?id=<?php echo $row['id_news'] ?>" method="post" enctype="multipart/form-data">
 <table width="100%" border="1">
   <tr>
     <td colspan="2"><div align="center">Modify news</div></td>

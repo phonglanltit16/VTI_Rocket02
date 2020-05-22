@@ -7,13 +7,13 @@
 	move_uploaded_file($img_tmp,'uploads/'.$img);
 	$price = $_POST['price'];
 	$description=$_POST['description'];
-	$id_producttype=$_POST['id_producttype'];
+	$producttype=$_POST['producttype'];
 	$no= $_POST['no'];
 
 	if(isset($_POST['add'])){
 		//add 
 		$sql="INSERT INTO detailsproduct(  img	,   price,    description	 ,id_producttype ,   no ) 
-			  VALUES 		            ('$img', '$price', '$description', '$id_producttype', '$no')";
+			  VALUES 		            ('$img', '$price', '$description', '$producttype', '$no')";
 			  
 		if (mysqli_query($conn, $sql)) {
 			echo "Thêm dữ liệu thành công";
@@ -28,14 +28,17 @@
 	}elseif(isset($_POST['modify'])){
 		//modify
 		if($img!=''){
-		$sql="update detailsproduct set 	img='$img',price='$price',description='$description',id_producttype='$id_producttype',no='$no'
+		$sql="update detailsproduct set 	img='$img',price='$price',description='$description',id_producttype='$producttype',no='$no'
 		where id_product='$id'";
 		}else{
-			$sql="update detailsproduct set 	price='$price',description='$description',id_producttype='$id_producttype',no='$no'
+			$sql="update detailsproduct set 	price='$price',description='$description',id_producttype='$producttype',no='$no'
 		where id_product='$id'";
 		}
-		//print($sql);
-		mysqli_query($sql);
+		if(mysqli_query($conn,$sql)){
+			echo "ok";
+		}else{
+			echo 'Không thành công. Lỗi' . $connect->error;
+		}
 		header('location:../../index.php?management=managementofdetailsproduct');
 		
 	}else{

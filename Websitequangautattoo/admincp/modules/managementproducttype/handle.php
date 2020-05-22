@@ -19,9 +19,9 @@
 		
 	}elseif(isset($_POST['modify'])){
 		//modify
-		$sql="update producttype set producttypename='$producttypename', no='$no'
-		where id_producttype='$id'";
-		mysqli_query($sql);
+		$sql="UPDATE producttype SET producttypename='$producttypename', no='$no'
+		WHERE id_producttype='$id'";
+		mysqli_query($conn,$sql);
 		header('location:../../index.php?management=managementproducttype&id'.$id);
 		
 	}else{

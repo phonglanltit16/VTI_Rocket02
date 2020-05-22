@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="TypeQuestion.TypeName"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="sun.applet.Main"/>
+<fullyQualifiedTypeName name="TS_lession_2.SystemOutPrinf"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="TS_buoi1.Account"/>
+<fullyQualifiedTypeName name="TS_buoi1.Department"/>
+<fullyQualifiedTypeName name="TS_buoi1.Position"/>
+<fullyQualifiedTypeName name="java.security.acl.Group"/>
+<fullyQualifiedTypeName name="TS_lession_2.Account"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex2.entity.Department"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex2.entity.Position"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex2.entity.Account"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex2.entity.Group"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex1.Ex1_Costructor"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex2.backend.Ex1_Costructor"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex3.entity.Student"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex3.backend.Ex1"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javafx.concurrent.Worker"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex5.entity.Q12_Staff"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex5.entity.Q12_Worker"/>
+<fullyQualifiedTypeName name="sun.security.mscapi.KeyStore.MY"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex5.entity.Q12_MyEnumGender"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex5.entity.Q12_Position"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex5.backend.Q12_PositionManagement"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex5.entity.Q4_TaiLieu"/>
+<fullyQualifiedTypeName name="TS_Assignment45.Ex5.entity.Q4_Sach"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+</qualifiedTypeNameHistroy>

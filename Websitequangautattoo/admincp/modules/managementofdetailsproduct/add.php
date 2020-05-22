@@ -1,4 +1,3 @@
-
 <?php
 	$localhostname='localhost';
 	$accoutname='root';
@@ -32,7 +31,7 @@
   <tr>
     <td>Product type</td>
     <td>
-    	<select name="id_producttype">
+    	<select name="producttype">
        	<?php
 		While($row=mysqli_fetch_array($run)){
         ?>

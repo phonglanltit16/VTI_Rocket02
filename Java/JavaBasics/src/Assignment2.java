@@ -1,4 +1,5 @@
 import java.util.Random;
+
 public class Assignment2 {
 	
 	public static void main(String[] args) 
@@ -42,7 +43,7 @@ public class Assignment2 {
 			
 			// Question 4:
 			System.out.println("________________________________________________");
-			System.out.println("Full name					|	ID		|	Date");
+			System.out.println("Full name	 |	ID	|	Date");
 			System.out.println("________________________________________________");
 			for(int i=0; i<10; i++)
 				{
@@ -50,4 +51,6 @@ public class Assignment2 {
 				}
 			System.out.println("________________________________________________");
 			}
+	
+	
 }
