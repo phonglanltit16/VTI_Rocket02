@@ -4,14 +4,15 @@
 		$tentk=$_POST['tentk'];
 		$mkcu=$_POST['mkcu'];
 		$mkmoi=$_POST['mkmoi'];
+		$re_mkmoi=$_POST['$re_mkmoi'];
 		$sql_chagepw="SELECT * FROM admin WHERE username='$tentk' and password= '$mkcu' limit 1";
 		$run=mysqli_query($conn,$sql_chagepw);
 		$nums=mysqli_num_rows($run);
 		if($nums==0){
 			echo ' Username or Password is wrong. Input again, please!';
 		}else{
-			echo $tentk;
-			echo $mkcu;
+			
+			
 			$sql_update= "UPDATE admin SET password='$mkmoi' WHERE tentk='$tentk'";
 			$run=mysqli_query($conn,$sql_update);
 			echo 'Change password sucessfully!';
