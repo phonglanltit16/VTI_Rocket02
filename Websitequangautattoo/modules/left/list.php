@@ -6,7 +6,7 @@
 	$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
 ?>
 <?php
-	$sql_producttype="select * from producttype";
+	$sql_producttype="SELECT * FROM producttype ORDER BY no";
 	$query=mysqli_query($conn,$sql_producttype);
 ?>
 <p class="left-titleproduct">Products</p>

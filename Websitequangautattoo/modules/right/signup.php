@@ -15,17 +15,24 @@
 			// Kiểm tra tài khoản đã tồn tại chưa
 			$sql="select * from signup where email='$email'";
 			$kt=mysqli_query($conn, $sql);
-
 			if(mysqli_num_rows($kt)  > 0){
 				echo '<p style="color:red"><strong>Tài khoản đã tồn tại. Mời đăng kí lại</strong></p>';
-			}else{		
-		$sql_signup="INSERT INTO signup (namecus,email,password)		VALUES('$namecus','$email','$password')";
-		$run_signup=mysqli_query($conn,$sql_signup);
-					if ($run_signup) {
+			//Kiểm tra định dạng email
+			}else{
+				$email_temple = '/^[A-Za-z0-9_.]{6,32}@([a-zA-Z0-9]{2,12})(.com)*$/';
+				$namecus_temple='/^[A-Za-z ]*$/';
+				$password_temple='/^[A-Z\w_\.!@#$%^&*()]{6,20}*$/';
+				if(preg_match($email_temple ,$email, $matchs)&&preg_match($namecus_temple ,$namecus, $matchs)&&preg_match($password_temple ,$password, $matchs)){
+   					$sql_signup="INSERT INTO signup (namecus,email,password) VALUES('$namecus' ,'$email', '$password')";
+					$run_signup=mysqli_query($conn,$sql_signup);
+					if ($run_signup){
 					  header('location:index.php?xem=notification');
 					}else{
 					   header('location:index.php?xem=payment');
-					}
+					} 
+				}else{ 
+					echo "Định dạng Email, Tên, Password không đúng"; 
+				} 
 			}
 		}
 	}
@@ -43,9 +50,7 @@
   </tr>
   <tr>
     <td>Email <strong style="color:red;"> (*)</strong></td>
-    <td width="60%"><input type="text" name="email" size="50">
-    
-    
+    <td width="60%"><input type="text" name="email" size="50">    
     </td>
   </tr>
   <tr>
@@ -58,5 +63,8 @@
     </td>
    </tr>
 </table>
+<p><strong>Name:</strong> gồm chữ hoa, chữ thường và dấu cách.</br></p>
+<p><strong>Password:</strong> gồm chữ hoa chữ thường và các kí tự đặc biệt:<strong>.!@#$%^&*() </strong>.</p>
+<p><strong>Email:</strong> đúng định dạng. Ví dụ: nguyenvanxxxxx@xxxxx.com</br>.</p>
 
 

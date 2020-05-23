@@ -1,14 +1,9 @@
 <?php
-	$localhostname='localhost';
-	$accoutname='root';
-	$pass='';
-	$database='webquangautattoo';
-	$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
-?>
-<?php
-	$sql_detailsproduct="SELECT * FROM detailsproduct WHERE id_product='$_GET[id];";
-	$query_detailsproduct=mysqli_query($conn,$sql_detailsproduct);
-	$row_detailsproduct=mysqli_fetch_array($query_detailsproduct);
+	include('admincp/modules/config.php');
+  $id_sp = $_GET['id'];
+  $sql_detailsproduct="SELECT * FROM detailsproduct WHERE id_product=$id_sp;";
+  $query_detailsproduct=mysqli_query($conn,$sql_detailsproduct);
+  $row_detailsproduct=mysqli_fetch_array($query_detailsproduct);
 ?>
 <div>
 <table width="300" border="1">
@@ -35,7 +30,8 @@
 <input type="submit" name="add_to_cart" value="Mua hàng" style="margin:10px;width:100px;height:40px;background:#9F6;color:#000;font-size:18px;border-radius:8px;" />
 </div>
 <?php
-		$sql_lienquan="SELECT id_producttype FROM detailsproduct WHERE id_producttype= AND id_product!=$id_producttype ORDER BY RAND () LIMIT 3 ";
+    $id_producttype = $row_detailsproduct['id_producttype'];    
+	$sql_lienquan="SELECT * FROM detailsproduct WHERE id_producttype=$id_producttype AND id_product!=$id_sp ORDER BY RAND () LIMIT 3 ";
 		$query_lienquan=mysqli_query($conn,$sql_lienquan);
 		$count_lienquan=mysqli_num_rows($query_lienquan);
 		if($count_lienquan>0){
@@ -64,4 +60,3 @@
     ?>
     
 <div class="clear"></div>
-          

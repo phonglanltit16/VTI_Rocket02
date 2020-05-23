@@ -17,7 +17,9 @@
 		session_start();
 		if(!isset($_SESSION['loginadmin'])){
 			header('location:loginadmin.php');
-		}
+		}else{
+			echo 'Xin chào admin <strong>' .$_SESSION['loginadmin'].'</strong>';
+		} 
     ?>
 	<div class="wrapper">
     	<?php

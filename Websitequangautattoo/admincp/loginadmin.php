@@ -1,9 +1,4 @@
 <?php
-		$localhostname='localhost';
-		$accoutname='root';
-		$pass='';
-		$database='webquangautattoo';
-		$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
 		include('modules/config.php');
 		session_start();
 		
@@ -11,7 +6,7 @@
 			mysqli_select_db("loginadmin",$conn);
 			$username=$_POST['username'];
 			$password=$_POST['password'];
-			$sql="select * from admin where username='$username' and password='$password' ";
+			$sql="SELECT * FROM admin WHERE username='$username' and password='$password' ";
 			$query=mysqli_query($conn,$sql);
 			$nums=mysqli_num_rows($query);
 			if($nums==0){
@@ -45,3 +40,24 @@
   </tr>
 </table>
  </form>
+ <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-primary">Login</h3>
+            <form method="POST" onsubmit="return false;" id="formChangePass">
+                <div class="form-group">
+                    <label for="user_signin">Username</label>
+                    <input type="t" name="username"class="form-control" id="old_pass">
+                </div>
+                <div class="form-group">
+                    <label for="user_signin">Password</label>
+                    <input type="password" name="password" class="form-control" id="new_pass">
+                </div>
+                
+                 <input type="submit" name="loginadmin" id="loginadmin" value="Submit">
+                <br><br>
+                <div class="alert alert-danger hidden"></div>
+            </form>
+        </div>
+    </div>
+</div>
