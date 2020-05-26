@@ -1,5 +1,9 @@
 <?php
-	include('admincp/modules/config.php');
+	$localhostname='localhost';
+	$accoutname='root';
+	$pass='';
+	$database='webquangautattoo';
+	$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
   $id_sp = $_GET['id'];
   $sql_detailsproduct="SELECT * FROM detailsproduct WHERE id_product=$id_sp;";
   $query_detailsproduct=mysqli_query($conn,$sql_detailsproduct);
@@ -27,8 +31,10 @@
   </tr>
   
 </table>
-<input type="submit" name="add_to_cart" value="Mua hàng" style="margin:10px;width:100px;height:40px;background:#9F6;color:#000;font-size:18px;border-radius:8px;" />
+<a href="index.php?xem=cart&add1=<?php echo $row_detailsproduct['id_product']?>"><img src="img/botton/buy1.jpg" height="80" width="120" style="float:right"></a><br>
 </div>
+
+
 <?php
     $id_producttype = $row_detailsproduct['id_producttype'];    
 	$sql_lienquan="SELECT * FROM detailsproduct WHERE id_producttype=$id_producttype AND id_product!=$id_sp ORDER BY RAND () LIMIT 3 ";

@@ -23,19 +23,18 @@
 				}elseif($tam=='signup'){
 					include('modules/right/signup.php');
 				}elseif(isset($_POST['search'])){
-					include('modules/right/search.php');
-					
-					
+					include('modules/right/search.php');					
 				}elseif($tam=='thank'){
 					include('modules/right/thank.php');
-				//}elseif($tam=='payment'){
-					//include('modules/right/payment.php');
-				}elseif($tam=='dathang'){
-					include('modules/right/dathang.php');
+				}elseif($tam=='cart'){
+					include('modules/right/cart.php');
 				}elseif($tam=='thanhtoan'){
 					include('modules/right/thanhtoan.php');
 				}elseif($tam=='notification'){
 					include('modules/right/notification.php');
+				}elseif($tam=='infororder'){
+					include('modules/right/infororder.php');	
+					
 				}else{
 					include('modules/right/allproduct.php');			
 				}

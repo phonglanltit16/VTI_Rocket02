@@ -5,7 +5,7 @@
 	$database='webquangautattoo';
 	$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
 	//session_destroy();
-	session_start();
+	@session_start();
 	if(isset($_POST['login'])){
 		$email=$_POST['email'];
 		$password=$_POST['password'];

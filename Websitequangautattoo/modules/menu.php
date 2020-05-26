@@ -1,4 +1,3 @@
-
 <div class="menu">
      
         <ul>
@@ -6,10 +5,10 @@
             <li><a href="?xem=allproduct">Product</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="?xem=dathang">Shopping Cart</a></li>
+            <li><a href="?xem=cart">Shopping Cart</a></li>
             <li><a href="?xem=login">Login</a></li>
-            <li><a href="?xem=thank">Logout</a></li>  
-            
+                        <li><a href="?xem=infororder">Login</a></li>
+
             
                    
         <div class="searchform" >
@@ -22,3 +21,4 @@
    
      </ul>
 </div>
+

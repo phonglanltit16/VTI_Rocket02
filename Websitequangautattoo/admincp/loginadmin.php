@@ -40,24 +40,4 @@
   </tr>
 </table>
  </form>
- <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-primary">Login</h3>
-            <form method="POST" onsubmit="return false;" id="formChangePass">
-                <div class="form-group">
-                    <label for="user_signin">Username</label>
-                    <input type="t" name="username"class="form-control" id="old_pass">
-                </div>
-                <div class="form-group">
-                    <label for="user_signin">Password</label>
-                    <input type="password" name="password" class="form-control" id="new_pass">
-                </div>
-                
-                 <input type="submit" name="loginadmin" id="loginadmin" value="Submit">
-                <br><br>
-                <div class="alert alert-danger hidden"></div>
-            </form>
-        </div>
-    </div>
-</div>
+ 
