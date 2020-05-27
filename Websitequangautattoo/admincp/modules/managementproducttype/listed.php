@@ -4,7 +4,7 @@
 	$run=mysqli_query($conn,$sql);
 ?>
 <form action="modules/managementproducttype/handle.php?id=<?php echo $row['id_producttype'] ?>" method="post" enctype="multipart/form-data">
-<table width="100%" border="1">
+<table class="table table-bordered table-hover">
 	<tr><a href="modules/managementproducttype/add.php">Add</a></tr>
   <tr>
     <td width="10%"><div align="center">ID</div></td>

@@ -1,24 +1,25 @@
 <div class="menu">
-     
-        <ul>
-            <li><a href="index.php">Homepage</a></li>
-            <li><a href="?xem=allproduct">Product</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="?xem=cart">Shopping Cart</a></li>
-            <li><a href="?xem=login">Login</a></li>
-                        <li><a href="?xem=infororder">Login</a></li>
-
+ <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="">Homepage <span class="sr-only"></span></a></li>
+                <li><a href="?xem=allproduct">Product</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="?xem=cart">Shopping cart</a></li>
+                <li><a href="?xem=login">Login</a></li>
             
-                   
-        <div class="searchform" >
-            <form action="index.php" method="post" enctype="multipart/form-data">
-               <input type="text" name="search" />
-                <input type="submit" name="ok" value="search" />
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" name="search" class="form-control" placeholder="Search...">
+                </div>
+        		<input type="submit" name="ok" value="search" />
             </form>
+            </ul>
         </div>
-        
-   
-     </ul>
+    </div>
+</nav>
+
 </div>
 

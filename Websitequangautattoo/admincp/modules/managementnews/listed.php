@@ -4,7 +4,7 @@
 	$run=mysqli_query($conn,$sql);
 ?>
 <form action="modules/managementnews/handle.php?id=<?php echo $row['id_news'] ?>" method="post" enctype="multipart/form-data">
-<table width="100%" border="1">
+<table class="table table-bordered table-hover">
   <tr><a href="modules/managementnews/add.php">Add</a></tr>
   <tr>
     <td colspan="7"><div align="center">List news</div></td>

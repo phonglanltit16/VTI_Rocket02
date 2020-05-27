@@ -5,33 +5,31 @@
 	$database='webquangautattoo';
 	$conn=mysqli_connect($localhostname,$accoutname,$pass,$database);
 	if(isset($_POST['signup'])){
-		$namecus=$_POST['namecus'];
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 		
-		if ($namecus == "" || $email == "" || $password == "" ) {
-			echo "bạn vui lòng nhập đầy đủ thông tin";
+		if ( $email == "" || $password == "" ) {
+			echo "Bạn vui lòng nhập đầy đủ thông tin";
   		}else{
 			// Kiểm tra tài khoản đã tồn tại chưa
-			$sql="select * from signup where email='$email'";
+			$sql="SELECT * FROM signup WHERE email='$email'";
 			$kt=mysqli_query($conn, $sql);
 			if(mysqli_num_rows($kt)  > 0){
 				echo '<p style="color:red"><strong>Tài khoản đã tồn tại. Mời đăng kí lại</strong></p>';
+				
 			//Kiểm tra định dạng email
 			}else{
 				$email_temple = '/^[A-Za-z0-9_.]{6,32}@([a-zA-Z0-9]{2,12})(.com)*$/';
-				$namecus_temple='/^[A-Za-z ]*$/';
+				
 				$password_temple='/^[A-Z\w_\.!@#$%^&*()]{6,20}*$/';
-				if(preg_match($email_temple ,$email, $matchs)&&preg_match($namecus_temple ,$namecus, $matchs)&&preg_match($password_temple ,$password, $matchs)){
-   					$sql_signup="INSERT INTO signup (namecus,email,password) VALUES('$namecus' ,'$email', '$password')";
+				if(preg_match($email_temple ,$email, $matchs)&&preg_match($password_temple ,$password, $matchs)){
+   					$sql_signup="INSERT INTO signup (email,password) VALUES('$email', '$password')";
 					$run_signup=mysqli_query($conn,$sql_signup);
 					if ($run_signup){
-					  header('location:index.php?xem=notification');
-					}else{
-					   header('location:index.php?xem=payment');
-					} 
+					  header('location:index.php?xem=cart');
+					}
 				}else{ 
-					echo "Định dạng Email, Tên, Password không đúng"; 
+					echo "Định dạng Email hoặc Password không đúng"; 
 				} 
 			}
 		}
@@ -44,10 +42,7 @@
 <p style="color:red;margin:5px;">Các mục dấu * là bắt buộc tối thiểu. Vui lòng điền đầy đủ và chính xác.</p>
   <form action="index.php?xem=signup" method="post" enctype="multipart/form-data">
 	<table width="100%" border="1" style="border-collapse:collapse;">
-  <tr>
-    <td width="40%">Name<strong style="color:red;"> (*)</strong></td>
-    <td width="60%"><input type="text" name="namecus" size="50"></td>
-  </tr>
+  
   <tr>
     <td>Email <strong style="color:red;"> (*)</strong></td>
     <td width="60%"><input type="text" name="email" size="50">    
@@ -63,8 +58,5 @@
     </td>
    </tr>
 </table>
-<p><strong>Name:</strong> gồm chữ hoa, chữ thường và dấu cách.</br></p>
-<p><strong>Password:</strong> gồm chữ hoa chữ thường và các kí tự đặc biệt:<strong>.!@#$%^&*() </strong>.</p>
+<p><strong>Password:</strong> gồm ít nhất 6 kí tự, chữ hoa chữ thường và các kí tự đặc biệt:<strong>.!@#$%^&*() </strong>.</p>
 <p><strong>Email:</strong> đúng định dạng. Ví dụ: nguyenvanxxxxx@xxxxx.com</br>.</p>
-
-

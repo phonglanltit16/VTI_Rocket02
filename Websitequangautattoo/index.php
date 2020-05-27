@@ -8,11 +8,8 @@
 <link rel="stylesheet" type="text/css" href="style/css.css">
 <title>Web Quang Âu Tattoo</title>
 </head>
-
-
 <body>
 <div class="content" style="height:auto">
-    				
 	<div class="wrapper">
     	<?php
 			include('admincp/modules/config.php');
@@ -21,13 +18,10 @@
 			include('modules/content.php');
 			include('modules/footer.php');
 		?>
-  
-        
+
     </div>
-    
-
-    
-    
-
 </body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </html>

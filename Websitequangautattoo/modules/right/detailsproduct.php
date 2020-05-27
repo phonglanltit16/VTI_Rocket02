@@ -10,7 +10,7 @@
   $row_detailsproduct=mysqli_fetch_array($query_detailsproduct);
 ?>
 <div>
-<table width="300" border="1">
+<table class="table table-bordered table-hover" width="800">
   <tr>
     <td colspan="2"><div align="center">Details Product</div></td>
   </tr>
@@ -34,6 +34,18 @@
 <a href="index.php?xem=cart&add1=<?php echo $row_detailsproduct['id_product']?>"><img src="img/botton/buy1.jpg" height="80" width="120" style="float:right"></a><br>
 </div>
 
+<form action="?xem=cart" method="post">
+    	<fieldset>
+        	<input type="hidden" name="id_product" value="<?php echo $row_detailsproduct['id_product']  ?>">
+        	<input type="hidden" name="price" value="<?php echo $row_detailsproduct['price'] ?>">
+        	<input type="hidden" name="img" value="<?php echo $row_detailsproduct['img'] ?>">
+        	<input type="hidden" name="soluong" value="1">
+
+        </fieldset>
+    </form>
+
+
+
 
 <?php
     $id_producttype = $row_detailsproduct['id_producttype'];    
@@ -44,7 +56,9 @@
 			
 ?>
     <div class="sanphamlienquan">
-    <div class="tieude">Sản phẩm liên quan</div>
+    	<div class="panel panel-primary">
+            <div class="panel-body">Sản phẩm liên quan</div>
+        </div> 
         <ul>
 			<?php
             while($row_lienquan=mysqli_fetch_array($query_lienquan)){
@@ -53,7 +67,11 @@
                 <p>Price: <?php echo $row_lienquan['price'] ?>VND</p>
                 <p>Details</p>
              </li>
-			<?php
+			
+ <div>
+ 	
+ </div>
+  <?php
                 }
             ?>
         </ul>
@@ -64,5 +82,5 @@
 			echo '<p style="padding:30px;">Hiện chưa có thêm sản phẩm nào</p>';
 		}
     ?>
-    
+      
 <div class="clear"></div>

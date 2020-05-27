@@ -1,5 +1,5 @@
 <div class="content">
-  	<div class="col-lg-2 col-xs-4 col-sm-2">
+  	<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 padding-0">
         <div class="content-left">
             <?php
                 include('modules/left/list.php');
@@ -7,7 +7,7 @@
         </div>
     </div>
     
-    <div class="col-lg-10 col-xs-8 col-sm-10">
+  	<div class="col-lg-10 col-md-20 col-sm-6 col-xs-6 padding-0">
         <div class="content-right">
             <?php
 				if(isset($_GET['xem'])){
