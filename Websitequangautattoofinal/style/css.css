@@ -1,0 +1,238 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	width: auto;
+	height: auto;
+	
+	margin: auto;
+}
+.header{
+	width: 100%;
+	height: 200px;
+	border: 1px solid #000;
+
+}
+.menu{
+	width: 100%;
+	height:70px;
+	border:2px solid #000;
+
+}
+.menu ul {
+	width: 100%;
+	height: 70px;
+	list-style:none;
+}
+.menu ul li {
+	float: left;
+	line-height: 70px;
+	margin-left: 15px;
+}
+.menu ul li a {
+	color: #000;
+	text-decoration: none;
+}
+.menu a:hover {
+	text-decoration: underline;
+}
+.searchform {
+	float:right;
+	margin:30px;
+}
+.content {
+	width: 100%;
+	height:auto;
+	border: 1px solid #000;
+}
+.content-left{
+	height:auto;
+	border: 1px solid #000;
+	
+}
+.left-titleproduct {
+	text-align: center;
+	color:#FFF;
+	padding: 10px;
+	background:#000;
+}
+.left-listproduct ul {
+	width: 100%;
+	height: auto;
+	list-style:none;
+}
+.left-listproduct ul li {
+	margin-left: 10px;
+	margin: 5px;
+}
+.left-listproduct ul li a {
+	color:#000;
+	text-decoration: underline;
+}
+.left-listproduct a:hover {
+	text-decoration: underline;
+}
+.left-dropbtn {
+	background-color:grey;
+	color: white;
+	padding: 8px;
+	font-size: 16px;
+	border:1px solid #000;
+	display: inline-block;
+	width: 100%;
+}
+
+.content-right {
+	height:auto;
+	border: 1px solid #000;
+}
+.right-titleproduct {
+	text-align: center;
+	color:#FFF;
+	padding: 10px;
+	background:#000;
+	margin-top:0px;
+}
+
+
+.clear {
+	clear:both;
+}
+.footer {
+	width: 100%;
+	height: auto;
+	border: 1px solid #000;
+
+}
+.allproduct ul{
+	width:100%;
+	list-style:none;
+		
+
+}
+.allproduct ul li{
+	height:auto;
+	border:1px solid #000;
+	text-align:center;
+	float:left;
+	padding-right:70px;
+}
+.allproduct ul li a {
+	text-decoration:none;
+	margin-top:2px;
+}
+
+
+
+
+
+
+
+a:link {text-decoration:none}
+a:visited {text-decoration:none}
+a:hover {text-decoration:none}
+ 
+ 
+.serviceBox {    
+padding: 15px 15px 25px;    
+margin:40px auto 0;    
+text-align: center;    
+cursor: pointer;    
+border-radius: 4px;    
+background:#fff;    
+border:1px solid #008b8b;    
+border-bottom-width:3px ;    
+position:relative;
+width:1000px;
+}
+ 
+.serviceBox .service-icon{    
+width:70px;    
+height:70px;    
+line-height:70px;    
+border-radius:4px;    
+border:1px solid #008b8b;    
+background:#fff;    
+color:#008b8b;    
+margin:-48px auto 20px;
+}
+.serviceBox .service-icon i {    
+display: inline-block;    
+font-size:3em;    
+line-height:70px;
+}
+.serviceBox:hover .service-icon{    
+background:#008b8b;    
+color:#fff;
+}
+.serviceBox h3 {    
+font-size: 20px;    
+font-weight:normal;    
+letter-spacing:0.7px;    
+position: relative;    
+margin:20px 0 10px 0;    
+padding:10px 0;    
+background:none;    
+overflow:hidden;    
+color:#555;
+}
+ 
+.serviceBox h3:before{    
+content:&quot;&quot;;    
+background:#008b8b;    
+width:0;    
+height:2px;    
+position:absolute;    
+bottom:0;    
+left:50%;
+}
+.serviceBox h3:after{    
+content:&quot;&quot;;    
+background:#008b8b;    
+width:0;    
+height:2px;    
+position:absolute;    
+bottom:0;    
+right:50%;
+}
+.serviceBox:hover h3:after,.serviceBox:hover h3:before{    
+width:100%;
+}
+.serviceBox,.service-icon,.serviceBox .service-icon i,.serviceBox h3:before,.serviceBox h3:after,.serviceBox .read{    
+transition: all 0.5s ease-in-out;
+}
+.serviceBox p {    
+font-size: 14px;    
+margin:0 0 15px;
+}
+.serviceBox .read{    
+color:#008b8b;
+}
+@media screen and (max-width: 990px){    
+.serviceBox{        
+margin:60px auto 0;    
+}
+}
+
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: green; 
+}
+.navbar .navbar-collapse {
+    justify-content: space-between; 
+}
+.navbar .navbar-collapse .input-group {
+      width: 30%;
+      float: right; 
+} 
+.navbar .navbar-collapse ul li a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: #fff; 
+}
+.navbar .navbar-collapse ul li a:hover {
+      background-color: #EB9233; 
+}
